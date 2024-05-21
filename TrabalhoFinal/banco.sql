@@ -1,2 +1,35 @@
 -- Active: 1714014287469@@127.0.0.1@3306@Biblioteca
+
+CREATE DATABASE Biblioteca;
+
+CREATE TABLE `livro` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `NOME` varchar(100) NOT NULL,
+  `DATA_LANCAMENTO` date DEFAULT NULL,
+  `AUTOR` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+  CREATE TABLE `autor` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `NOME` varchar(45) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `emprestimo` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `NOME` varchar(45) NOT NULL,
+  `LIVRO_NOME` varchar(45) NOT NULL,
+  `DT_INICIO` date NOT NULL,
+  `DT_FINAL` date NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 SELECT * from livro;
+
+SELECT * from autor;
+
+SELECT * from emprestimo;
+
+
